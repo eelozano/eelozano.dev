@@ -11,6 +11,6 @@ jobs:
       - name: Percy Test
         uses: percy/exec-action@v0.3.0
         with:
-          command: "cypress run --spec "cypress/integration/percy/visual.spec.ts"
+          command: "cypress run --spec 'cypress/integration/percy/visual.spec.js'"
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
