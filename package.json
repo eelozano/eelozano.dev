@@ -4,7 +4,9 @@
   "scripts": {
     "build": "gridsome build",
     "develop": "gridsome develop",
-    "explore": "gridsome explore"
+    "explore": "gridsome explore",
+    "test": "cypress run",
+    "citest": "percy exec -- cypress run --spec 'cypress/integration/percy/visual.spec.js'"
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.2",
@@ -14,6 +16,8 @@
     "gridsome": "^0.7.21"
   },
   "devDependencies": {
+    "@percy/cypress": "^2.3.2",
+    "cypress": "^5.5.0",
     "node-sass": "^4.14.1",
     "sass-loader": "^10.0.3"
   }
